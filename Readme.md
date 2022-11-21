@@ -34,7 +34,7 @@ Pure PHP Restful-API Interface
         }
     }
     
-    echo apitest::actionByMethod($_SERVER['REQUEST_METHOD']);
+    echo apitest::listen($_SERVER['REQUEST_METHOD']);
     ```
 3. Make a test(`Insomnia` or `Postman`... etc)
 
@@ -72,7 +72,7 @@ Pure PHP Restful-API Interface
         class apitest extends restful_api{
             protected static function POST()
             {
-                return self::buildResultJSON("POST REQUEST",201);
+                return self::listen("POST REQUEST",201);
             }
         }
 

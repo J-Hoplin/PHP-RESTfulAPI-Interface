@@ -51,7 +51,7 @@ class restful_api extends HTTPcodes {
         return self::commonResult(self::$INVALIDHTTPMETHOD);
     }
 
-    public static function actionByMethod($httpmethod){
+    public static function listen($httpmethod){
         if(is_callable(array(get_called_class(),$httpmethod))){
             return get_called_class()::$httpmethod();
         }else{
