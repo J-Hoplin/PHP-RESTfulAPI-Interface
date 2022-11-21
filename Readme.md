@@ -88,4 +88,4 @@ Pure PHP Restful-API Interface
         }
      ```
 
-5. **Important : You need to add `echo (class name you defined)::actionByMethod($_SERVER['REQUEST_METHOD'])` for api listening**
+5. **Important : You need to add `echo (class name you defined)::listen($_SERVER['REQUEST_METHOD'])` for api listening**
