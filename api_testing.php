@@ -12,6 +12,6 @@ class apitest extends restful_api{
     }
 }
 
-echo apitest::listen($_SERVER['REQUEST_METHOD']);
+apitest::listen();
 
 ?>

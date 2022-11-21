@@ -51,11 +51,17 @@ class restful_api extends HTTPcodes {
         return self::commonResult(self::$INVALIDHTTPMETHOD);
     }
 
-    public static function listen($httpmethod){
+    public static function listen(){
+        $httpmethod = strtoupper($_SERVER['REQUEST_METHOD']);
         if(is_callable(array(get_called_class(),$httpmethod))){
-            return get_called_class()::$httpmethod();
+            $res = get_called_class()::$httpmethod();
+            if(gettype($res) == "string"){
+                echo $res;
+            }else{
+                echo get_called_class()::commonResult(self::$INVALIDRETURNTYPE);
+            }
         }else{
-            return get_called_class()::commonResult(self::$INVALIDHTTPMETHOD);
+            echo get_called_class()::commonResult(self::$INVALIDHTTPMETHOD);
         }
     }
 }

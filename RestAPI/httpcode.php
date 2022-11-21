@@ -20,6 +20,10 @@ class HTTPcodes{
         "code" => 405,
         "msg" => "Method not allowed"
     );
+    protected static $INVALIDRETURNTYPE = array(
+        "code" => 500,
+        "msg" => "Invalid return type. Type should be jsonstring or string"
+    );
 }
 
 ?>

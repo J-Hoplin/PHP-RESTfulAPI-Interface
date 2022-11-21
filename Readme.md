@@ -34,7 +34,7 @@ Pure PHP Restful-API Interface
         }
     }
     
-    echo apitest::listen($_SERVER['REQUEST_METHOD']);
+    apitest::listen();
     ```
 3. Make a test(`Insomnia` or `Postman`... etc)
 
@@ -76,7 +76,7 @@ Pure PHP Restful-API Interface
             }
         }
 
-        echo apitest::listen($_SERVER['REQUEST_METHOD']);
+        apitest::listen();
      ?>
      ```
 
