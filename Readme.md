@@ -72,7 +72,7 @@ Pure PHP Restful-API Interface
         class apitest extends restful_api{
             protected static function POST()
             {
-                return self::listen("POST REQUEST",201);
+                return self::buildResultJSON("POST REQUEST",201);
             }
         }
 
