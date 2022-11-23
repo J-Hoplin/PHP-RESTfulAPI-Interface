@@ -60,7 +60,7 @@ Pure PHP Restful-API Interface
    - PUT
    - DELETE
 
-4. Return type should be `json encoded` liked type. You can define your own but recommend to use `restful_api.buildResultJSON` static method
+4. Return type should be `json encoded` liked type(should use `json_encode()`). You can define your own but recommend to use `restful_api.buildResultJSON` static method
    - `buildResultJSON` require two parameter
      1. data : **`Default is " "`**. Data you want to make as JSON payload
      2. statuscode : **`Default is 200`**. Status code of response. Usage of this parameter are like this under below
